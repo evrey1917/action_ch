@@ -12,7 +12,7 @@ file(GLOB all_SRCS
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 
-message(all_SRCS)
+message("${all_SRCS}")
 
 option(MATCH_TESTS "build tests (or no)" OFF)
 

@@ -7,30 +7,14 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/include
 )
 add_subdirectory(libraries/googletest)
-# file(GLOB all_SRCS
-#         "${PROJECT_SOURCE_DIR}/include/*.h"
-#         "${PROJECT_SOURCE_DIR}/src/*.cpp"
-# )
 
-# message(1..................START)
-# message("${all_SRCS}")
-# message(1..................END)
-
-# # file(GLOB all_SRCS "${PROJECT_SOURCE_DIR}/include/minus.h" "${PROJECT_SOURCE_DIR}/include/plus.h" "${PROJECT_SOURCE_DIR}/include/mult.h" "${PROJECT_SOURCE_DIR}/include/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
-
-# message(2..................START)
-# message("${all_SRCS}")
-# message(2..................END)
-
-option(MATCH_TESTS "build tests (or no)" OFF)
+option(MATCH_TESTS "build tests (or no)" ON)
 
 if (MATCH_TESTS)
-        add_library(example_google_tests "${PROJECT_SOURCE_DIR}/include/math/minus.h" "${PROJECT_SOURCE_DIR}/include/math/plus.h" "${PROJECT_SOURCE_DIR}/include/math/mult.h" "${PROJECT_SOURCE_DIR}/include/meta/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
+        add_library(example_google_tests "${PROJECT_SOURCE_DIR}/include/math/minus.h" "${PROJECT_SOURCE_DIR}/include/math/plus.h" "${PROJECT_SOURCE_DIR}/include/math/mul.h" "${PROJECT_SOURCE_DIR}/include/meta/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
         enable_testing()
         add_subdirectory(tests)
 endif()
 
 
-add_executable(app "${PROJECT_SOURCE_DIR}/include/math/minus.h" "${PROJECT_SOURCE_DIR}/include/math/plus.h" "${PROJECT_SOURCE_DIR}/include/math/mult.h" "${PROJECT_SOURCE_DIR}/include/meta/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
-# add_executable(app ${all_SRCS})
-# add_executable(app ${PROJECT_SOURCE_DIR}/libraries/googletest)
+add_executable(app "${PROJECT_SOURCE_DIR}/include/math/minus.h" "${PROJECT_SOURCE_DIR}/include/math/plus.h" "${PROJECT_SOURCE_DIR}/include/math/mul.h" "${PROJECT_SOURCE_DIR}/include/meta/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")

@@ -25,12 +25,12 @@ add_subdirectory(libraries/googletest)
 option(MATCH_TESTS "build tests (or no)" OFF)
 
 if (MATCH_TESTS)
-        add_library(example_google_tests "${PROJECT_SOURCE_DIR}/include/minus.h" "${PROJECT_SOURCE_DIR}/include/plus.h" "${PROJECT_SOURCE_DIR}/include/mult.h" "${PROJECT_SOURCE_DIR}/include/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
+        add_library(example_google_tests "${PROJECT_SOURCE_DIR}/include/minus" "${PROJECT_SOURCE_DIR}/include/plus" "${PROJECT_SOURCE_DIR}/include/mult" "${PROJECT_SOURCE_DIR}/include/meta" "${PROJECT_SOURCE_DIR}/src/main")
         enable_testing()
         add_subdirectory(tests)
 endif()
 
 
-add_executable(app "${PROJECT_SOURCE_DIR}/include/minus.h" "${PROJECT_SOURCE_DIR}/include/plus.h" "${PROJECT_SOURCE_DIR}/include/mult.h" "${PROJECT_SOURCE_DIR}/include/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
+add_executable(app "${PROJECT_SOURCE_DIR}/include/minus" "${PROJECT_SOURCE_DIR}/include/plus" "${PROJECT_SOURCE_DIR}/include/mult" "${PROJECT_SOURCE_DIR}/include/meta" "${PROJECT_SOURCE_DIR}/src/main")
 # add_executable(app ${all_SRCS})
 # add_executable(app ${PROJECT_SOURCE_DIR}/libraries/googletest)

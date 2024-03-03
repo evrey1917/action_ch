@@ -12,14 +12,16 @@ file(GLOB all_SRCS
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 
-option(MATCH_TESTS "build tests (or no)" ON)
+message(all_SRCS)
+
+option(MATCH_TESTS "build tests (or no)" OFF)
 
 if (MATCH_TESTS)
-        add_library(example_google_tests ${PROJECT_SOURCE_DIR}/libraries/googletest)
+        # add_library(example_google_tests ${PROJECT_SOURCE_DIR}/libraries/googletest)
         enable_testing()
         add_subdirectory(tests)
 endif()
 
 
-# add_executable(app ${all_SRCS})
-add_executable(app ${PROJECT_SOURCE_DIR}/libraries/googletest)
+add_executable(app ${all_SRCS})
+# add_executable(app ${PROJECT_SOURCE_DIR}/libraries/googletest)

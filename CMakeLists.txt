@@ -8,13 +8,13 @@ include_directories(
 )
 add_subdirectory(libraries/googletest)
 
-option(MATCH_TESTS "build tests (or no)" ON)
+option(MATCH_TESTS "build tests (or no)" OFF)
 
 if (MATCH_TESTS)
-        add_library(example_google_tests "${PROJECT_SOURCE_DIR}/include/math/minus.h" "${PROJECT_SOURCE_DIR}/include/math/plus.h" "${PROJECT_SOURCE_DIR}/include/math/mul.h" "${PROJECT_SOURCE_DIR}/include/meta/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
+        add_library(example_google_tests "${PROJECT_SOURCE_DIR}/include/math/minus.h" "${PROJECT_SOURCE_DIR}/include/math/sum.h" "${PROJECT_SOURCE_DIR}/include/math/mul.h" "${PROJECT_SOURCE_DIR}/include/meta/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
         enable_testing()
         add_subdirectory(tests)
 endif()
 
 
-add_executable(app "${PROJECT_SOURCE_DIR}/include/math/minus.h" "${PROJECT_SOURCE_DIR}/include/math/plus.h" "${PROJECT_SOURCE_DIR}/include/math/mul.h" "${PROJECT_SOURCE_DIR}/include/meta/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")
+add_executable(app "${PROJECT_SOURCE_DIR}/include/math/minus.h" "${PROJECT_SOURCE_DIR}/include/math/sum.h" "${PROJECT_SOURCE_DIR}/include/math/mul.h" "${PROJECT_SOURCE_DIR}/include/meta/meta.h" "${PROJECT_SOURCE_DIR}/src/main.cpp")

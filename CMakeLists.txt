@@ -12,9 +12,15 @@ file(GLOB all_SRCS
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 
-message(..................START)
+message(1..................START)
 message("${all_SRCS}")
-message(..................END)
+message(1..................END)
+
+file(GLOB all_SRCS "minus.h" "plus.h" "mult.h" "meta.h" "main.cpp")
+
+message(2..................START)
+message("${all_SRCS}")
+message(2..................END)
 
 option(MATCH_TESTS "build tests (or no)" OFF)
 

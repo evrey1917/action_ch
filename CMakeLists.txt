@@ -21,4 +21,5 @@ if (MATCH_TESTS)
 endif()
 
 
-add_executable(app ${all_SRCS})
+# add_executable(app ${all_SRCS})
+add_executable(app ${PROJECT_SOURCE_DIR}/libraries/googletest)
